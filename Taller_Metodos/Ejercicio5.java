@@ -17,39 +17,50 @@ public class Ejercicio5 {
     /**
      * @param args the command line arguments
      */
+    public class Ejercicio5 {
+
+    /**
+     * @param args the command line arguments
+     */
     public static void main(String[] args) {
         // TODO code application logic here
         Ejercicio5 obj = new Ejercicio5();
         
         int dias=3;
-        int horas=0;
-        int min=0;
-        int opcion=1;
-        System.out.println("Los dias en segundos son: "+obj.convertira_Segundos(dias, horas, min, opcion ));
+        System.out.println("Los dias en segundos son: "+obj.convertira_Segundos(dias ));
         
-        dias=0;
-        horas=32;
-        min=0;
-        opcion=2;
-        System.out.println("Las horas en segundos son: "+obj.convertira_Segundos(dias, horas, min, opcion ));
         
-        dias=0;
-        horas=0;
-        min=55;
-        opcion=3;
-        System.out.println("Los minutos en segundos son: "+obj.convertira_Segundos(dias, horas, min, opcion ));
+        int horas=32;
+        System.out.println("Las horas en segundos son: "+obj.convertira_Segundos1(horas));
+        
+    
+        int min=55;
+        System.out.println("Los minutos en segundos son: "+obj.convertira_Segundos2(min ));
         
     }
     
-    
-    public int convertira_Segundos(int dias, int horas,int min, int opcion ){
-        int segundos=0;
-        switch (opcion) {
-            case 1 -> segundos = dias*86400;
-            case 2 -> segundos= horas*3600;
-            case 3 -> segundos = min*60;
-        }
+    public int convertira_Segundos(int dias){
+       
+       
+           int segundos = dias*86400;
+           
         return segundos;
+    }
     
+     public int convertira_Segundos1(int horas){
+       
+       
+           int segundos = horas*3600;
+           
+        return segundos;
+    }
+        
+      public int convertira_Segundos2(int min){
+       
+       
+           int segundos = min*60;
+           
+        return segundos;
     }
 }
+
